@@ -35,6 +35,10 @@ echo How many packets would you like to capture?
 read packets
 echo Wich source?
 read source
-echo Wich port?
+echo Wich port? Leave blank if you want to capture from any port.
 read portnumber
-sudo tcpdump -i $source -c$packets -nn -A port $portnumber
+if [ $sportnumber == ""]; then
+	sudo tcpdump -i $source -nn -A
+else
+	sudo tcpdump -i $source -c$packets -nn -A port $portnumber
+fi
