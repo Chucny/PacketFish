@@ -1,0 +1,5 @@
+#!/bin/bash
+echo This script will install all libraries needed for PacketFish Packet Capturer
+echo Installing tcpdump...
+sudo apt install tcpdump
+echo The script has been finished. You can now close this window.
